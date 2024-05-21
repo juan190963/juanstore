@@ -1,0 +1,136 @@
+{
+    "store.custom#page-kappa": {
+        "blocks": [
+            "list-context.image-list#kappa",
+            "rich-text#kappa-title",
+            "link#Button",
+            "rich-text#kappa-subTitle",
+            //"flex-layout.row#Categories"
+            "info-card#categories",
+            "info-card#categoriesk",
+            "info-card#categories1"
+        ]
+    },
+   
+    "info-card#categories": {
+        "props": {
+            "imageUrl": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-hombre-kappa-colombia-web-junio___962521c8eb249ab283093810dbd988f0.webp",
+            "blockClass": "categories"
+        }
+    },
+    "info-card#categoriesk": {
+        "props": {
+            "imageUrl": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-mujer-kappa-colombia-web-junio___297f3f1f05f47ecb5e57dffa0d348a05.webp",
+            "blockClass": "categories"
+        }
+    },
+    "info-card#categories1": {
+        "props": {
+            "id": "info-card-home",
+            "isFullModeStyle": false,
+            "textPosition": "center",
+            "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+            "url": "https://www.kappa-col.com/hombre",
+            "blockClass": "info-card-home",
+            "textAlignment": "center"
+        }
+    },
+    "list-context.image-list#kappa": {
+        "children": [
+            "slider-layout#kappa-images"
+        ],
+        "props": {
+            "height": 570,
+            "preload": true,
+            "images": [
+                {
+                    "image": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/d5b303ed-3c1e-4981-a1df-98a2fe1ca6dc___da0b79f932a68b2850797587f59150eb.jpg",
+                    "mobileImage": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/1c52f4bc-bd38-4751-b9de-160fb681da75___8f2ddd959598daf135d21a781859087c.jpg"
+                },
+                {
+                    "image": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/d46ca46a-1314-479a-be13-5bbe1291a271___f5e2d38ff0fd7b84974f0a78cd75c9ff.jpg",
+                    "mobileImage": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/080aae4c-c58a-45bf-9d46-46b175ab2e2d___7a2db0ff5c29d69d6bb87b5bdeffab2d.jpg"
+                },
+                {
+                    "image": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/de83d17a-a1ee-4aff-899f-2a91ec1296f5___e842b90be9ffaf8e322055b7b9b40aa5.jpg",
+                    "mobileImage": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/6e521054-77d5-4bd5-be2a-9c6fa0ab379b___d4a9043a5e05c3a5a6e1b141887c29c7.jpg"
+                },
+                {
+                    "image": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/78b66f51-6cf3-4101-a2ce-ff8b1ce56487___7fa0ce7db1dc38957c901ab517b9f81c.jpg",
+                    "mobileImage": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/69fa9c47-8a87-43c7-aae8-8dc60fbccbe7___c3c9750d2336351d3ae41d5770e06018.jpg"
+                },
+                {
+                    "image": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/fac8f8bb-0df8-4fb2-a067-dbedfd924b12___ddfb69492d0150e1108a4887319f7f41.jpg",
+                    "mobileImage": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/f04401b5-fe11-4d08-9832-27707b10ec17___138c7b62475e60a29608cffdbb30d123.jpg"
+                }
+            ]
+        }
+    },
+    "slider-layout#kappa-images": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true,
+            "showNavigationArrows": "desktopOnly",
+            "blockClass": "carousel"
+        }
+    },
+    "rich-text#kappa-title": {
+        "props": {
+            "text": "## CONOCE NUESTRA ÚLTIMA COLECCIÓN",
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "blockClass": "kappaTitle"
+        }
+    },
+    "link#Button": {
+        "props": {
+            "href": "#",
+            "label": "VER TODO",
+            "displayMode": "button",
+            "blockClass": "ShippingSimulator"
+        }
+    },
+    "rich-text#kappa-subTitle": {
+        "props": {
+            "text": "## Bienvenido a Kappa",
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "blockClass": "kappaSubtitle"
+        }
+    }
+    //"flex-layout.row#Categories": {
+    //"children": [
+    //   "image#CategoriesH",
+    // "image#CategoriesM",
+    // "image#CategoriesN"
+    // ]
+    //  },
+    // "image#CategoriesH": {
+    //  "props": {
+    //   "src": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-hombre-kappa-colombia-web-junio___962521c8eb249ab283093810dbd988f0.webp",
+    //    "maxHeight": "",
+    //  "maxWidth": "",
+    //  "blockClass": "categories"
+    // // }
+    // },
+    //"image#CategoriesM":{
+    //   "props": {
+    //    "src": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-mujer-kappa-colombia-web-junio___297f3f1f05f47ecb5e57dffa0d348a05.webp",
+    //   "maxHeight": "",
+    // "maxWidth": "",
+    //  "blockClass": "categories"
+    // }
+    // },
+    // "image#CategoriesN":{
+    //  "props": {
+    //      "src": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-ninos-kappa-colombia-web-junio___32b94323be0af86ed8270560537809cb.webp",
+    //     "maxHeight": "",
+    //    "maxWidth": "",
+    //   "blockClass": "categories"
+    // }
+    // }
+}

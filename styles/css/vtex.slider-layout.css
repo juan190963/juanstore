@@ -7,6 +7,7 @@
   min-height: 450px;
 }
 
+
 .sliderTrackContainer {
   max-width: 100%;
 }
@@ -30,4 +31,42 @@
   min-height: 550px;
 }
 
+
+.paginationDot--isActive{
+  height: 0.625rem;
+  width: 0.625rem;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background-color: #000;
+    outline: 0;
+    margin-right: .25rem;
+    margin-left: .25rem;
+    padding: .25rem;
+    letter-spacing: 0;
+}
+
+.sliderLayoutContainer--listaKappa {
+  background-color: #F0F0F0;
+  min-height: 450px;
+}
+
+@media screen and (min-width: 20em) {
+  .sliderLayoutContainer--listaKappa  {
+      font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 20em) {
+  .sliderLayoutContainer--listaKappa {
+      font-family: Montserrat-Regular, arial, sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+  }
+
+  .caretIcon--listKappa{
+    color: #fff;
+  }
+}
 

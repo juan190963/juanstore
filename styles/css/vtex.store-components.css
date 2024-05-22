@@ -112,7 +112,7 @@
   image-rendering: -webkit-optimize-contrast;
 }
 
-.infoCardContainer--categories{
+.infoCardContainer--listKappa{
   display: flex;
   height: 435px;
   margin: 0 auto;
@@ -141,4 +141,13 @@
 
   }
 }
+
+.imageElement--listKappa{
+  max-width: 100%;
+  border-style: none;
+  width: 100%;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
 

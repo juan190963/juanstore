@@ -88,25 +88,27 @@
     line-height: 1.3em;
   }
 
-  .heading--kappaTitle{
+  .container--kappa-title .heading--kappa-title{
+    padding: 0 40px;
+    justify-content: center;
+    text-align: center;
     font-size: 2rem;
-    font-weight: 400;
-    color: #000;
     font-family: Montserrat-Regular, arial, sans-serif;
+    font-weight: 400;
     text-transform: none;
     letter-spacing: 0;
+    color: #0f0f0f;
+    -webkit-box-pack: start;
+    justify-content: flex-start
   }
 
-
-  .heading--kappaSubtitle{
-    font-size: 2rem;
-    font-weight: 400;
-    color: #000;
-    font-family: Montserrat-Regular, arial, sans-serif;
-    text-transform: none;
-    letter-spacing: 0;
-    margin-top: 30%;
-    margin-bottom: 10%;
+  @media screen and (max-width: 768px) {
+    .container--kappa-title {
+      font-size: 1rem;
+        font-family: Montserrat-Regular, arial, sans-serif;
+        
+  
+    }
   }
 }
 

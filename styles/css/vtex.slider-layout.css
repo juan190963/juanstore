@@ -10,6 +10,7 @@
 
 .sliderTrackContainer {
   max-width: 100%;
+  
 }
 
 .paginationDotsContainer {
@@ -22,15 +23,19 @@
   margin-bottom: 20px;
   max-width: 96rem;
   min-height: 550px;
+
 }
 
 .slide--shelf {
   margin-bottom: 25px;
   padding-left: .5rem;
   padding-right: .5rem;
-  min-height: 550px;
+  
 }
 
+.paginationDot--shelf{
+  position: fixed;
+}
 
 .paginationDot--isActive{
   height: 0.625rem;
@@ -44,11 +49,26 @@
     margin-left: .25rem;
     padding: .25rem;
     letter-spacing: 0;
+    
 }
 
 .sliderLayoutContainer--listaKappa {
   background-color: #F0F0F0;
   min-height: 450px;
+  animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+}
+
+
+@keyframes scroll{
+  0%{
+    -webkit-transform: translateX(0);
+    transform:translateX(0);
+  }
+  100%{
+    -webkit-transform: translateX(calc(-200px * 6));
+    transform:translateX(0);
+  }
 }
 
 @media screen and (min-width: 20em) {
@@ -57,16 +77,55 @@
   }
 }
 
-@media screen and (min-width: 20em) {
-  .sliderLayoutContainer--listaKappa {
-      font-family: Montserrat-Regular, arial, sans-serif;
-      font-weight: 400;
-      text-transform: none;
-      letter-spacing: 0;
+  .caretIcon--listKappa{
+    color: #ffffff;
   }
 
-  .caretIcon--listKappa{
-    color: #fff;
+
+  .paginationDot--listKappa{
+   position: relative; 
+   top: 40px; 
+   align-items: center;
+
   }
+
+ 
+
+
+
+
+.sliderLayoutContainer--newsKappa{
+  max-width: 100%;
+  display: block;
+  cursor: pointer;
 }
 
+.sliderArrows--newsKappa{
+  top: 40%;
+  margin: 1%;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(224, 224, 224, 0.415) !important;
+  border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+ 
+ 
+}
+.caretIcon--newsKappa{
+  color: #272727;
+  width: 15px;
+  height: 15px;
+}
+
+.caretIcon--newsKappa:hover{
+  color: #000;
+}
+
+
+.sliderArrows--newsKappa:hover{
+  background-color: rgba(255, 255, 255, 0.644) !important;
+}
+
+
+.slideChildrenContainer--shelf{
+  height: fit-content;
+}

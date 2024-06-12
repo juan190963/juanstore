@@ -6,18 +6,7 @@
   text-decoration: underline;
 }
 
-.infoCardContainer--info-card-home {
-  max-width: 1520px;
-  margin: 0 auto;
-  background-color: #e6f1e6;
-  padding: 0px;
-}
 
-.newsletter {
-  background-color: #03054e;
-  max-width: 1528px;
-  margin: 0 auto;
-}
 
 .newsletter .container {
   padding: 60px 10px;
@@ -29,6 +18,7 @@
 }
 
 .inputGroup {
+
   padding-bottom: 4px;
   display: flex;
   color: #fff;
@@ -69,15 +59,19 @@
   .newsletter .container {
     padding: 140px;
   }
+
   .label {
-     font-size: 40px;
+    font-size: 40px;
   }
+
   .infoCardContainer--info-card-home .infoCardTextContainer {
     width: 30%;
   }
+
   .infoCardContainer--info-card-home .infoCardImageContainer {
     width: 70%;
   }
+
   .imageElement--storePrint {
     margin-bottom: 0px;
     max-height: 600px;
@@ -112,7 +106,34 @@
   image-rendering: -webkit-optimize-contrast;
 }
 
-.infoCardContainer--listKappa{
+
+@media only screen and (min-width: 640px) {
+  .newsletter .container {
+    padding: 140px;
+  }
+
+  .label {
+    font-size: 40px;
+  }
+
+  .infoCardContainer--info-card-home .infoCardTextContainer {
+    width: 30%;
+  }
+
+  .infoCardContainer--info-card-home .infoCardImageContainer {
+    width: 70%;
+  }
+
+  .imageElement--storePrint {
+    margin-bottom: 0px;
+    max-height: 600px;
+  }
+}
+
+
+/*lista kappa*/
+
+.infoCardContainer--listKappa {
   display: flex;
   height: 435px;
   margin: 0 auto;
@@ -132,22 +153,72 @@
   font-size: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-  .imageElement--categories{
-    height: 200px;
-    background-position: top;
-    margin: 0 auto;
-    padding: 0;
-
-  }
-}
-
-.imageElement--listKappa{
+.imageElement--listKappa {
   max-width: 100%;
   border-style: none;
   width: 100%;
   overflow-clip-margin: content-box;
   overflow: clip;
+}
+
+.infoCardTextContainer--card-department {
+ 
+display: none;
+
+}
+
+.infoCardTextContainer--card-department1 {
+display: none;
+
+}
+
+.infoCardContainer--card-department {
+  height: 435px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 96%;
+}
+
+
+
+
+
+.imageElement--newsKappa {
+  aspect-ratio: 1;
+  max-width: 96%;
+  position: relative;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  text-size-adjust: 100%;
+  border: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+}
+
+.imageElement--newsKappa:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+
+
+@media screen and (max-width: 769px) {
+  .infoCardContainer--card-department {
+    height: 200px;
+    background-position: top;
+    margin-top: 5%;
+  }
+
+  .infoCardImage--card-department {
+    height: 200px;
+        background-position: top;
+        margin-top: 5%;
+  }
 }
 
 

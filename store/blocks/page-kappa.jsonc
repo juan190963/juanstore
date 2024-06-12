@@ -3,20 +3,27 @@
         "blocks": [
             "list-context.image-list#kappa",
             "rich-text#kappa-title",
+            "flex-layout.row#shelf",
             "link#Button",
-            "rich-text#kappa-subTitle",
+            "rich-text#kappa-title1",
             "flex-layout.row#departments-cards",
-            "list-context.image-list#news"
+            "rich-text#kappa-title2",
+            "flex-layout.row#news"
         ]
     },
     "list-context.image-list#kappa": {
         "children": [
             "slider-layout#kappa-images"
         ],
+        "title": "Header",
         "props": {
             "height": 570,
             "preload": true,
             "images": [
+                {
+                    "image": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/4b411273-b496-42af-8d93-1d3897efc14e___435f734ac28f492854602e0639bf010f.jpg",
+                    "mobileImage": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/f41917e0-bcb6-4675-823f-8a37d0c9fcf6___1cd6fd2b6af9167fe4e7efbea95db7cd.jpg"
+                },
                 {
                     "image": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/d5b303ed-3c1e-4981-a1df-98a2fe1ca6dc___da0b79f932a68b2850797587f59150eb.jpg",
                     "mobileImage": "https://kappaco.vtexassets.com/assets/vtex.file-manager-graphql/images/1c52f4bc-bd38-4751-b9de-160fb681da75___8f2ddd959598daf135d21a781859087c.jpg"
@@ -41,151 +48,222 @@
         }
     },
     "slider-layout#kappa-images": {
+        "title": "slider/image",
         "props": {
+            "usePagination":true,
             "itemsPerPage": {
                 "desktop": 1,
                 "tablet": 1,
                 "phone": 1
             },
             "infinite": true,
-            "showNavigationArrows": "desktopOnly",
+            "showNavigationArrows": "always",
             "blockClass": "listKappa"
         }
     },
     "rich-text#kappa-title": {
+        "title": "Titulo vitrina",
         "props": {
             "text": "## CONOCE NUESTRA ÚLTIMA COLECCIÓN",
             "textAlignment": "CENTER",
             "textPosition": "CENTER",
             "blockClass": "kappa-title"
+            
+            
+        }
+    },
+    "flex-layout.row#shelf": {
+        "title": "Contenedor vitrina",
+        "children": [
+            "list-context.product-list#demo"
+        ]
+    },
+    "list-context.product-list#demo": {
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#demo-products"
+        ],
+        "props": {
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    },
+    "slider-layout#demo-products": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 3,
+                "phone": 1
+            },
+            "infinite": true,
+            "fullWidth": false,
+            "blockClass": "shelf"
+        
         }
     },
     "link#Button": {
+        "title": "Contenedor boton vitrina",
         "props": {
-            "href": "#",
+            "href": "https://www.kappa-col.com/164?map=productClusterIds",
             "label": "VER TODO",
             "displayMode": "button",
             "blockClass": "ver"
         }
     },
-    "rich-text#kappa-subTitle": {
+    "rich-text#kappa-title1": {
+        "title": "Titulo departamentos",
         "props": {
             "text": "## Bienvenido a Kappa",
             "textAlignment": "CENTER",
             "textPosition": "CENTER",
-            "blockClass": "shelfTitle"
+            "blockClass": "kappa-title1"
         }
     },
-    "flex-layout.row#departments-cards": {
+    "flex-layout.row#departments-cards":{
+        "title": "Contenedor tarjeta departamentos",
         "children": [
-            "image#CategoriesH",
-            "image#CategoriesM",
-            "image#CategoriesN"
-        ]
-    },
-    "image#CategoriesH": {
+            "info-card#hombre",
+            "info-card#mujer",
+            "info-card#ninos"
+        ],
         "props": {
-            "link": {},
-            "src": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-hombre-kappa-colombia-web-junio___962521c8eb249ab283093810dbd988f0.webp",
-            "maxHeight": "",
-            "maxWidth": "",
-            "blockClass": "categories"
+            "blockClass": "departments-cards"
         }
+        
     },
-    "image#CategoriesM": {
-        "props": {
-            "src": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-mujer-kappa-colombia-web-junio___297f3f1f05f47ecb5e57dffa0d348a05.webp",
-            "maxHeight": "",
-            "maxWidth": "",
-            "blockClass": "categories"
-        }
-    },
-    "image#CategoriesN": {
-        "props": {
-            "link": {
 
-            },
-            "src": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-ninos-kappa-colombia-web-junio___32b94323be0af86ed8270560537809cb.webp",
-            "maxHeight": "",
-            "maxWidth": "",
-            "blockClass": "categories"
+    "info-card#hombre":{
+        "title": "Primer departamento",
+        "props":{
+            "callToActionMode":"none",
+            "id": "card-department",
+            "imageActionUrl":"https://www.kappa-col.com/hombre",
+            "imageUrl": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-hombre-kappa-colombia-web-junio___962521c8eb249ab283093810dbd988f0.webp",
+            "blockClass": "card-department",
+            "isFullModeStyle": "true",
+            "mobileImageUrl":"https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-hombre-kappa-colombia-web-junio___962521c8eb249ab283093810dbd988f0.webp"
         }
     },
 
+    "info-card#mujer":{
+
+        "title": "Segundo departamento",
+        
+        "props":{
+            "callToActionMode":"none",
+                        "id": "card-department",
+            "imageActionUrl": "https://www.kappa-col.com/mujer",
+            "mobileImageUrl":"https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-mujer-kappa-colombia-web-junio___297f3f1f05f47ecb5e57dffa0d348a05.webp",
+            "imageUrl": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-mujer-kappa-colombia-web-junio___297f3f1f05f47ecb5e57dffa0d348a05.webp",
+            "isFullModeStyle": "true",
+            
+            "blockClass": "card-department"
+        }
+    },
+
+    "info-card#ninos":{
+        "title": "Tercer departamento",
+        "props":{
+            "callToActionMode":"none",
+            "id": "card-department",
+            "imageActionUrl": "https://www.kappa-col.com/ninos",
+            "imageUrl": "https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-ninos-kappa-colombia-web-junio___32b94323be0af86ed8270560537809cb.webp",
+            "mobileImageUrl":"https://kappaco.vtexassets.com/assets/vtex/assets-builder/kappaco.kappacol-theme/7.0.12/img/home/departamento-ninos-kappa-colombia-web-junio___32b94323be0af86ed8270560537809cb.webp",
+            "isFullModeStyle": "false",
+            "blockClass": "card-department"
+        }
+    },
+
+    "rich-text#kappa-title2": {
+        "title": "Titulo feed instagram",
+        "props": {
+            "text": "## ÚLTIMAS NOTICIAS ",
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "blockClass": "kappa-title2"
+            
+        }
+    },
+
+
+    "flex-layout.row#news":{
+        "title": "news",
+        "children": ["list-context.image-list#news"],
+        "props": {
+            "fullWidth": false
+        }
+    },
     "list-context.image-list#news": {
-        "children": ["slider-layout#news"],
+        "children": [
+            "slider-layout#news-images"
+        ],
+        "title": "Contenedor feed instagram",
         "props": {
-          "height": 800,
-          "images": [
-            {
-              "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/441622773_18152598007312653_7377774870834508142_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=nbYl4dpAXDYQ7kNvgH1z-oT&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYAq8rp-wK7NepPUfZg-wakx6nHdIzNJEOlSKjKy_3ssng&oe=6653D123"
-              
-            },
-            {
-              "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/441903525_18152301667312653_3456548247733820615_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=PHH1Q8Xd-1oQ7kNvgE3DgQY&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYAqKfwXfDl8ERl3Sd60GxuoEtMupNg3eHRPyqZXG8Szlg&oe=6653DE1A"
-              
-            },
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t51.29350-15/445160612_422729060546080_2556492803935022267_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=0dTRh04L5IQQ7kNvgF1_y34&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYAvc8EYLAGYeQx1FyOh0qNHYRsCPntBtCf9BOAW0JgylQ&oe=6653E42B"
-            },
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/441574289_18152119162312653_5964597305230994900_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=5PfpW_gIA7cQ7kNvgFxrUa9&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYCpYHh8lD0aEFTX-qODZXcQDQzVo0jricQDud23AzswZQ&oe=6653C693"
-            },
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/429847016_18144863848312653_3221932143198982668_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=Z_8i2M7-DDsQ7kNvgGW0Jbd&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYDl7tgIod7XiVzi3wTmIN_kKGWzQ1VWEogqhn_2CdG4HQ&oe=6653DE72"
-            },
             
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/429864991_18144863728312653_8158769896558635748_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=ycdGHlqMBqcQ7kNvgFDPCmr&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYB7KqEJMyCjSugLiTRrTJG2U9X-OHcDps2Pi5pn84Mibg&oe=6653CC40"
-            },
-            
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/429925213_18144862708312653_5442081685723917524_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=VXTX_SgKBREQ7kNvgG6itmu&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYDZbR5-Y_YLaJV8M6OxsHN_4VZL3L4DFGyAWg8Qq0RF2w&oe=6653C845"
-            },
-            
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/428644514_18143171119312653_8783125851210393754_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=18de74&_nc_ohc=pzKF8vwL05EQ7kNvgEBPfkL&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYBs5wa3KMhqi68CFvF8uCsunGKXekpUVkEsjV4ILeufMA&oe=6653DAC8"
-            },
-            
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t51.29350-15/427635850_752907443568748_5321969938761925161_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=PtqLL4liLEkQ7kNvgF-MR_w&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYAIpd10AbgPNE6Ztu9iB7UsXzR_IMJ56hH_fMF9ohPYxQ&oe=6653D70B"
-            },
-            
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/428639533_18142853191312653_6979191026606085302_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=Px6TML8CuioQ7kNvgHAvfsC&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYBw5USDBiZrdLp0epf-u1LIGDboiCC7bot2KQeqZwRrlw&oe=6653E463"
-            },
-            
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/421180504_18140234536312653_6330650933919301446_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=o-4uOqfJZtAQ7kNvgFiVWJc&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYDe28-h5mS1gmgx5r_V8HMKOBhFcsq16aBIwLn88oOxMg&oe=6653B834"
-            },
-            
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/421216146_18140207404312653_4180562608516231105_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=eQz0ZKsxUmMQ7kNvgEveUcp&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYAPEK8x8twCUgVtm6opNUdxScOOFnh0i78n50KoRIyw3A&oe=6653D399"
-            },
-
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t51.29350-15/420149860_386225274059631_1747365181383510275_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=m4ITrlTqDXMQ7kNvgEPniFA&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYCSaPzm6A6GmuWrumXvscgACBxpkaT0RXxb_a5wTFW0Kg&oe=6653D9A7"
-            },
-
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t51.29350-15/418707282_1089578585508273_4582327763937052699_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=ukVxcaK86ckQ7kNvgGUpi9F&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYDXfqj8ajJL7c1X_5_9nyBGgca9ntUZQBg5wKZkyEvf5Q&oe=6653ED99"
-            },
-
-            {
-                "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/419451381_18139100008312653_2888087952482891277_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=960OzFxxVcUQ7kNvgGNrt6e&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYAfnoxiqYrHnaLmdkhxH0PZ9B_3rx42np8SSWrZDAda6w&oe=6653D37C"
-            }
-          ]
+            "height": 500,
+            "preload": true,
+            "images": [
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/441488020_18152790268312653_2343286049773789382_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=zZsecgZmI-AQ7kNvgEhtGwy&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzM3NDQwNzA1Mzg2MTc0Mjk5OQ%3D%3D.2-ccb7-5&oh=00_AYByxvsbQrIyzIgTo_wOFQc3xT7V39b1HPM-s6p-Mzg7Ww&oe=66666D07&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/445372719_18152705764312653_3374299091646548799_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=cUQJQ8hHeLwQ7kNvgFwgWgD&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzM3Mzc3NTgzMTY0NzQ1MzkxNw%3D%3D.2-ccb7-5&oh=00_AYBrQZYvaPNdtVxzFs_iPUzvhQvFOm0PBBOzE1bAa0Xjbg&oe=66667212&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/441622773_18152598007312653_7377774870834508142_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=by6B1uUnN-sQ7kNvgHUW0xV&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzM3Mjk4NTkzMDU2MTQwOTY4OQ%3D%3D.2-ccb7-5&oh=00_AYCbs03_r4iqBipPnAPll_kngbrlj-Mvp1us8U_Ds9Qbew&oe=66664623&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/441903525_18152301667312653_3456548247733820615_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=BdanG4_UdvoQ7kNvgEhBmUD&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzM3MDg0MDQyNTEzMTg1NDAyMQ%3D%3D.2-ccb7-5&oh=00_AYCfN5ljWpgde5Z81I5pHROIX1OhfJU9gLXTaulfWd2bpg&oe=6666531A&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent-hel3-1.cdninstagram.com/v/t51.29350-15/445160612_422729060546080_2556492803935022267_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=0vExd7FY70sQ7kNvgHhkZWQ&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYDIu6xtRc5BHdTNzCDHW4el_VPwvO-7aG9akW0TwuAr7g&oe=6666592B"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/441574289_18152119162312653_5964597305230994900_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=LK14OM2HWyQQ7kNvgHos0MR&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzM2OTUyMTM5Nzk0MzU4ODg4MQ%3D%3D.2-ccb7-5&oh=00_AYBn2j1EU5D9GKZZB_bnb2qHTlhKlwCn9woheKwMnYLywg&oe=66644153&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/429847016_18144863848312653_3221932143198982668_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=cZV5nJS_SaIQ7kNvgE5Zxg0&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMxODc2OTA4MDY1NTE3NDE0Nw%3D%3D.2-ccb7-5&oh=00_AYA-Wsg4Tj0yF-VqxDiX3DFr4tPugHueRs9eLRzh5rwo5Q&oe=66645932&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/429864991_18144863728312653_8158769896558635748_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=AUZCXBaV-fEQ7kNvgHJk9X2&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMxODc2Nzk4MTk4MjUzMDA5OA%3D%3D.2-ccb7-5&oh=00_AYB-a9N_Zt0mOlSEMgYq1_gktkEQyFbygJmYN2PQt1r4AQ&oe=66664140&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/429925213_18144862708312653_5442081685723917524_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=vU4XrjDqF_8Q7kNvgFgi-I_&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMxODc2MjU4MTU0NzYxMzk0Mg%3D%3D.2-ccb7-5&oh=00_AYD1Ih6R-UUAStOloiz60c-YO2P6DAqHO6OAVIv8T6xXng&oe=66644305&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/428644514_18143171119312653_8783125851210393754_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=L6_lCgxprjUQ7kNvgE4hOGq&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMwNjQ1NDAxNjk2NzM5MDM1Mg%3D%3D.2-ccb7-5&oh=00_AYBmWo672lzK5bGytWpyeI_9nMGn0K_LdwzDsoy6JOvk2g&oe=66664FC8&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent-hel3-1.cdninstagram.com/v/t51.29350-15/427635850_752907443568748_5321969938761925161_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=kd3UnHtFbuMQ7kNvgEab1em&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYAyFm3zCeBSVKwtGTIjy4J4Xp5ClNO_lzS00REnhdCIMw&oe=66664C0B"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/428639533_18142853191312653_6979191026606085302_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=9fKmJIq8gO0Q7kNvgG1lcOR&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMwNDIzNDYxNjA0NjU2NzQ3Ng%3D%3D.2-ccb7-5&oh=00_AYDjyp2weuJvETDTUt2vwsf9hrWMnn5BhEnxJ272xXj9ww&oe=66665963&_nc_sid=10d13b"
+                },
+                {
+                    "image": "https://scontent.cdninstagram.com/v/t39.30808-6/421180504_18140234536312653_6330650933919301446_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=GhzWugZgsJMQ7kNvgFD8Y6L&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzI4NjIyNDE4NTcxNzg2MjY1Ng%3D%3D.2-ccb7-5&oh=00_AYD2a1jokSkai-vqqXBqP5YjfMe3jCpmqS9hbA-kKgSk6A&oe=66666574&_nc_sid=10d13b"
+                },
+                
+                { 
+                    "image": "https://scontent-hel3-1.cdninstagram.com/v/t39.30808-6/421216146_18140207404312653_4180562608516231105_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=XrVFaHbRd9wQ7kNvgHhPFPP&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYD6-_iWWM3ah9UUccFcmSc2yw8gmGwjlT15JxikT2qUPw&oe=66664899"
+                },
+                {
+                    "image": "https://scontent-hel3-1.cdninstagram.com/v/t51.29350-15/420149860_386225274059631_1747365181383510275_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=DhovM6gATmYQ7kNvgESTbD-&_nc_ht=scontent-hel3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AYA8ADKbplzkUhzlm-gBVCJkdrUP_Mqg6Q8V8FxKkB4hvA&oe=66664EA7"
+                }
+            ]
         }
-      },
-
-      "slider-layout#news": {
+    },
+    "slider-layout#news-images": {
         "props": {
-          "itemsPerPage": {
-            "desktop": 1,
-            "tablet": 1,
-            "phone": 1
-          },
-          "infinite": true
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 4,
+                "phone": 4
+            },
+            "infinite": true,
+            "showPaginationDots": "never",
+            "showNavigationArrows": "always",
+            "blockClass": "newsKappa"
         }
     }
 }

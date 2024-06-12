@@ -1,8 +1,13 @@
 {
   "add-to-cart-button": {
+    
     "props": {
+      
       "addToCartFeedback": "customEvent",
-      "customPixelEventId": "add-to-cart-button"
+      "customPixelEventId": "add-to-cart-button",
+      "text": "COMPRAR",
+      "isOneClickBuy": false,
+      "blockClass": "comprar"
     }
   },
 
@@ -11,5 +16,10 @@
       "customPixelEventId": "add-to-cart-button"
     },
     "children": ["minicart-base-content"]
+
+    
   }
+  
 }
+
+

@@ -151,11 +151,11 @@
       "text": "How can I track my order?"
     }
   },
-  "rich-text#answer4": {
-    "props": {
-      "text": "After logging into your account, you can find this info at the link Orders."
-    }
-  },
+  // "rich-text#answer4": {
+  //   "props": {
+  //     "text": "After logging into your account, you can find this info at the link Orders."
+  //   }
+  // },
 
 
   "disclosure-state-indicator": {

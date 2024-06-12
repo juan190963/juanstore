@@ -100,4 +100,19 @@
 
 
 
+.flexRowContent--compra{
+  :global(.vtex-button){
+    bottom: 0;
+    background-color: #000;
+    color: #ffffff;
+    font-family: Montserrat-Regular, arial, sans-serif;
+    border-color: #0f0f0f;
+    min-height: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.9s ease;
+    cursor: pointer;
+    
+  }
+}
+
 
